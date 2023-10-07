@@ -22,7 +22,7 @@
         // Redirección a la página principal después de 5 segundos
         echo '<script>
                 setTimeout(function() {
-                    window.location.href = "http://banca_linea.test/index.php";
+                    window.location.href = "https://bancalinea-production.up.railway.app/index.php";
                 }, 5000); // 5000 milisegundos = 5 segundos
               </script>';
     } else {

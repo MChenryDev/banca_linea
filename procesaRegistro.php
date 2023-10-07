@@ -38,7 +38,7 @@
         echo "Registro insertado correctamente.";
 
         // Envío de correo electrónico para activación
-        $activationLink = 'http://banca_linea.test/activar_cuenta.php?token=' . $token;
+        $activationLink = 'https://bancalinea-production.up.railway.app/activar_cuenta.php?token=' . $token;
 
         // Inicializa la clase de PHPMailer
         $mail = new PHPMailer();
