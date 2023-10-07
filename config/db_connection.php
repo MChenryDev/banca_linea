@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 $host = 'containers-us-west-130.railway.app'; 
 $dbname = 'railway';
 $username = 'root';
