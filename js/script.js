@@ -427,7 +427,6 @@ function enviarDatos6(formData) {
 //     xhr.send(formData);
 //   }
 
-// Variable para almacenar el resultado del servidor
 var serverResponse;
 
 // Codigo para validar contraseñas (agregar_user_caja)
@@ -446,7 +445,7 @@ function validar7(event) {
                 text: 'Las contraseñas no coinciden!'
             });
         } else {
-            if (serverResponse === "existe") {
+            if (serverResponse && serverResponse.includes("existe")) {
                 Swal.fire({
                     icon: 'error',
                     title: 'Oops...',
@@ -487,7 +486,7 @@ function enviarDatos7(formData) {
                 // Manejar la respuesta
                 console.log("Respuesta del servidor:", serverResponse);
 
-                if (serverResponse === "existe") {
+                if (serverResponse && serverResponse.includes("existe")) {
                     Swal.fire({
                         icon: 'error',
                         title: 'Oops...',
