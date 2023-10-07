@@ -91,7 +91,7 @@ include '../config/db_connection.php';
                     <input type="hidden" name="saldo_cuenta" id="saldo_cuenta" value="">
 
                     <label class="form-label" for="cantidad_retiro">Cantidad a Retirar</label>
-                    <input class="form-input" type="numb" name="cantidad_retiro" id="cantidad_retiro">
+                    <input class="form-input" type="numb" name="cantidad_retiro" id="cantidad_retiro" required>
                     
                     <input type="hidden" name="formulario_enviado" value="1">
                     <button class="form-button" type="submit" onclick="validar6(event)">Realizar Retiro</button>
@@ -100,7 +100,7 @@ include '../config/db_connection.php';
         </section>
     </div>
     <footer class="footer">
-        <p>Todos los derechos reservados. Banco Max</p>
+        <p>Todos los derechos reservados. Banco XYZ</p>
     </footer>
     <script src="../js/script.js"></script>
     <!-- Incluir SweetAlert2 JS -->

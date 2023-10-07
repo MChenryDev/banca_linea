@@ -88,7 +88,7 @@ $fecha_actual = date('d/m/Y');
         </section>
     </div>
     <footer class="footer">
-        <p>Todos los derechos reservados. Banco Max</p>
+        <p>Todos los derechos reservados. Banco XYZ</p>
     </footer>
 <script src="../js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

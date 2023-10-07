@@ -81,7 +81,7 @@ h2 {
 h3 {
   font-size: 1.8rem;
 }
-h1,h2,h3, h4, p, th, td {
+h1,h2,h3, h4, p, th, td, strong {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   font-family: 'Prompt', sans-serif;
@@ -193,3 +193,7 @@ input, label, button, select, option {
 .bgcolor {
   background-color: rgb(11, 98, 156);
 }
+
+ol li p {
+  text-align: left !important;
+ }

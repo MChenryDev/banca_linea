@@ -119,7 +119,7 @@ session_start();
         </section>
     </div>
     <footer class="footer">
-        <p>Todos los derechos reservados. Banco Max</p>
+        <p>Todos los derechos reservados. Banco XYZ</p>
     </footer>
     <script src="../js/script.js"></script>
     <!-- Incluir SweetAlert2 JS -->

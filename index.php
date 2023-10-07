@@ -97,16 +97,48 @@ $_SERVER['PHP_AUTH_PW'] = '';
                 </div>
                 
                 <p>
-                    Este es la pantalla principal, Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error aliquid eum facilis temporibus, distinctio delectus. Voluptatem voluptates unde quis expedita nesciunt, quos dolor aperiam libero dolorum consequatur aliquid impedit. Cumque?  <?php echo '';  ?>
-                </p>
-                <p>
                     <b>Si desea iniciar sesión en el "Panel de Usuario" deberá de utilizar su Correo Electrónico como Usuario</b>
+                    <ol>
+  <li>
+    <strong>Panel de Administrador:</strong>
+    <p>
+    Para utilizar este sitio deberá de solicitar al o, a los administradores las credenciales para poder ingresar al panel de "Administrador". Una vez iniciada sesión como administrador, podrá crear nuevos usuarios con rol de cajeros, además de que tendrá acceso a un monitor de trasferencias donde podrá ver el total de transferencia por hora y total de usuarios que han hecho transacciones por hora durante el día
+    </p>
+  </li>
+
+  <li>
+    <strong>Registro:</strong>
+    <p>
+    El usuario tendrá la posibilidad de registrarse, al ingresar a la página de registro el usuario deberá de completar los campos solicitados. Al registrarse, el sistema desplegará un mensaje confirmando la operación e indicando que deberá de revisar su correo electrónico para proceder a activar su cuenta. Al ingresar al correo y hacer click al link de confirmación, se abrirá una página indicando que su cuenta ha sido actividad y se le rediccionará en 5 segundos a la página principal del sistema para su correspondiente inicio de sesión.
+    </p>
+  </li>
+
+  <li>
+    <strong>Panel de Usuario:</strong>
+    <p>
+    Al hacer click en "Usuario" el sistema le pedirá las credenciales que utilizó mientras se registró. Es importante que previamente haya activado su cuenta, de lo contrario, no podrá ingresar. Una vez iniciada sesión como usuario, podrá realizar operaciones como agregar cuentas de terceros, realizar transferencias a cuentas de terceros y consulta de estado de cuenta. Con respecto a la agregación de cuentas de terceros el sistema le notificará si la cuenta de terceros ya existe, si ya existe, el sistema no le permitirá agregar la cuenta. En el caso de las transferencias a cuentas de terceros, el sistema validará las condiciones de máxima cantidad a transferir, y máximo de transferencias por día. Finalmente, en el estado de cuenta podrá ver el detalle de débitos y créditos realizados.
+    </p>
+  </li>
+  <li>
+    <strong>Panel de Cajero:</strong>
+    <p>
+    Aquí podrá crear cuentas monetarias, así mismo, podrá realizar operaciones de retiro y depósito para dichas cuentas. Al momento de agregar una cuenta monetaria, el sistema determinará si la cuenta existe o no.}
+    </p>
+  </li>
+
+  <li>
+    <strong>Salir de la cuenta:</strong>
+    <p>
+      Para salir de la cuenta, deberá de hacer click en "Salir".
+    </p>
+  </li>
+</ol>
                 </p>
             </div>
         </section>
     </div>
     <footer class="footer">
-        <p>Todos los derechos reservados. Banco Max</p>
+        <p>Todos los derechos reservados. Banco XYZ</p>
     </footer>
         <script>
             function logout() {
