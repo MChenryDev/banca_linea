@@ -1,0 +1,195 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+      max-width: 80%;
+      margin: 0 auto;
+  }
+}
+
+/* nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+} */
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media (min-width: 768px) {
+  nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+  }
+}
+
+header img {
+  max-width: 50px;
+  vertical-align: middle;
+}
+
+.nav-bar {
+  background-color: rgb(72, 150, 153);
+  max-width: 120rem;
+  justify-content: space-around;
+  
+}
+
+a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding: 1rem;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Prompt', sans-serif;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.nav-bar a:hover {
+  background-color: rgb(255, 166, 0);
+  color: rgb(0, 0, 0);
+}
+
+.nav-bar svg:hover {
+  stroke: rgb(0, 0, 0);
+}
+
+h1 {
+  font-size: 3.8rem;
+}
+h2 {
+  font-size: 2.8rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+h1,h2,h3, h4, p, th, td {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Prompt', sans-serif;
+  font-family: 'PT Sans', sans-serif;
+}
+
+input, label, button, select, option {
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Prompt', sans-serif;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 1.1rem;
+}
+
+.bloque {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seccion {
+  margin: 0.5rem;
+  padding-bottom: 1.5rem;
+  background-color: rgba(62, 96, 158, 0.199);
+  border-radius: 0.5rem;
+  box-shadow: 10px 11px 2px -7px rgba(0,0,0,0.56);
+  -webkit-box-shadow: 10px 11px 2px -7px rgba(0,0,0,0.56);
+  -moz-box-shadow: 10px 11px 2px -7px rgba(0,0,0,0.56);
+}
+
+/* formulario */
+.form-label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.form-option {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.form-button {
+  background-color: rgb(72, 150, 153);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Estilo del formulario */
+.seccion form {
+  padding: 2rem;
+}
+
+.seccion form {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Estilo para la tabla */
+.estilo-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  margin-top: 2rem;
+}
+
+.estilo-tabla th,
+.estilo-tabla td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.estilo-tabla th {
+  background-color: rgb(72, 150, 153);
+  color: white;
+  font-weight: bold;
+}
+
+.estilo-tabla tr:nth-child(even) {
+  background-color: rgba(62, 96, 158, 0.199);
+}
+
+
+.footer {
+  background-color: rgb(72, 150, 153);
+  color: white;
+  padding: 0.5rem;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Prompt', sans-serif;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+.bgcolor {
+  background-color: rgb(11, 98, 156);
+}
