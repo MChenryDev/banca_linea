@@ -23,7 +23,7 @@ $stmtLimites->fetch();
 $stmtLimites->close();
 
 // Para averiguar el maximo de cantidad de transacciones
-$queryCantidadTransacciones = "SELECT COUNT(*) FROM bitacora_transacciones WHERE cuenta_origen = ? AND fecha_transaccion = CURDATE()";
+$queryCantidadTransacciones = "SELECT COUNT(*) FROM bitacora_transacciones WHERE cuenta_origen = ? AND DATE(fecha_transaccion) = CURDATE()";
 $stmtCantidadTransacciones = $conn->prepare($queryCantidadTransacciones);
 $stmtCantidadTransacciones->bind_param('i', $cuentaOrigen);
 $stmtCantidadTransacciones->execute();
