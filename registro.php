@@ -71,7 +71,7 @@ session_start();
                 <h3>Registro de Nuevo Usuario</h3>
                 <form class="registro-form" action="registro_usuario_procesar.php" method="post" id="miFormulario7">
                     <label class="form-label" for="numero_cuenta">No. Cuenta:</label>
-                    <input class="form-input" type="text" id="numero_cuenta" name="numero_cuenta" required>
+                    <input class="form-input" type="number" id="numero_cuenta" name="numero_cuenta" required>
                     <label class="form-label" for="correo">Correo Electrónico:</label>
                     <input class="form-input" type="email" id="correo" name="correo" required>
                     <label class="form-label" for="telefono">No. De Teléfono:</label>
