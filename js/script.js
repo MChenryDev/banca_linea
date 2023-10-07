@@ -445,13 +445,13 @@ function validar7(event) {
                 text: 'Las contraseñas no coinciden!'
             });
         } else {
-            if (serverResponse && serverResponse.includes("existe")) {
+            if (serverResponse === "existe") {
                 Swal.fire({
                     icon: 'error',
                     title: 'Oops...',
                     text: 'La cuenta ya existe!'
                 });
-            } else {
+            } else if (serverResponse === "Registro insertado correctamente.") {
                 Swal.fire({
                     icon: 'success',
                     title: 'Usuario Creado Correctamente',
@@ -464,6 +464,8 @@ function validar7(event) {
                         //document.procesaFormCajero.submit();
                     }
                 });
+            } else {
+                alert("Error: " + serverResponse);
             }
         }
     } else {
@@ -486,13 +488,7 @@ function enviarDatos7(formData) {
                 // Manejar la respuesta
                 console.log("Respuesta del servidor:", serverResponse);
 
-                if (serverResponse && serverResponse.includes("existe")) {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Oops...',
-                        text: 'La cuenta ya existe!'
-                    });
-                } else {
+                if (serverResponse === "Registro insertado correctamente.") {
                     // refrescar
                     window.location.reload();
                 }
@@ -504,6 +500,7 @@ function enviarDatos7(formData) {
 
     xhr.send(formData);
 }
+
 
 
 
