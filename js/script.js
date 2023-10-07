@@ -366,78 +366,13 @@ function enviarDatos6(formData) {
 }
 
 // Codigo para validar contraseñas (agregar_user_caja)
-// function validar7(event) {
-//     event.preventDefault();  // Detener el envío del formulario
-  
-//     var intentos = 0;
-//     var pass = document.getElementById("contrasena").value;
-//     var pass1 = document.getElementById("confirmar_contrasena").value;
-  
-//     if (intentos <= 3) {
-//         if (pass !== pass1) {
-//             Swal.fire({
-//                 icon: 'error',
-//                 title: 'Oops...',
-//                 text: 'Las contraseñas no coinciden!'
-//             });
-//         } 
-//         else if (xhr.responseText === "existe") {
-//             Swal.fire({
-//                 icon: 'error',
-//                 title: 'Oops...',
-//                 text: 'Las cuenta ya existe!'
-//             });
-//         } 
-//         else {
-//             Swal.fire({
-//                 icon: 'success',
-//                 title: 'Usuario Creado Correctamente',
-//                 text: 'Verifica tu cuenta de correo para activar tu cuenta. Presiona Aceptar para continuar...'
-//             }).then((result) => {
-//                 if (result.isConfirmed) {
-//                     // Si todo es válido, enviar datos del formulario por AJAX
-//                     var formData = new FormData(document.getElementById("miFormulario7"));
-//                     enviarDatos7(formData);
-//                     //document.procesaFormCajero.submit();
-//                 }
-//             });
-//         }
-//     } else {
-//         alert("Has alcanzado el máximo número de intentos.!!");
-//     }
-//   }
-
-
-
-  
-// //   // AJAX Formulario
-//   function enviarDatos7(formData) {
-//     var xhr = new XMLHttpRequest();
-//     xhr.open("POST", "procesaRegistro.php", true);
-//     xhr.onload = function () {
-//         if (xhr.status === 200) {
-//             // Manejar la respuesta 
-//             console.log("Respuesta del servidor:", xhr.responseText);
-//             // refrescar 
-//             window.location.reload();
-//         } else {
-//             alert("Hubo un error en la solicitud al servidor.");
-//         }
-//     };
-//     xhr.send(formData);
-//   }
-
-
-var serverResponse;
-
-// Codigo para validar contraseñas (agregar_user_caja)
 function validar7(event) {
     event.preventDefault();  // Detener el envío del formulario
-
+  
     var intentos = 0;
     var pass = document.getElementById("contrasena").value;
     var pass1 = document.getElementById("confirmar_contrasena").value;
-
+  
     if (intentos <= 3) {
         if (pass !== pass1) {
             Swal.fire({
@@ -445,13 +380,15 @@ function validar7(event) {
                 title: 'Oops...',
                 text: 'Las contraseñas no coinciden!'
             });
-        } else if (serverResponse === "La cuenta ya existe.") {
+        } 
+        else if (xhr.responseText === "existe") {
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
-                text: 'La cuenta ya existe!'
+                text: 'Las cuenta ya existe!'
             });
-        } else {
+        } 
+        else {
             Swal.fire({
                 icon: 'success',
                 title: 'Usuario Creado Correctamente',
@@ -461,47 +398,36 @@ function validar7(event) {
                     // Si todo es válido, enviar datos del formulario por AJAX
                     var formData = new FormData(document.getElementById("miFormulario7"));
                     enviarDatos7(formData);
+                    //document.procesaFormCajero.submit();
                 }
             });
         }
     } else {
         alert("Has alcanzado el máximo número de intentos.!!");
     }
-}
+  }
 
-// AJAX Formulario
-function enviarDatos7(formData) {
+
+
+  
+// //   // AJAX Formulario
+  function enviarDatos7(formData) {
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "procesaRegistro.php", true);
-    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState == XMLHttpRequest.DONE) {
-            if (xhr.status == 200) {
-                // Almacena el resultado del servidor
-                serverResponse = xhr.responseText;
-
-                // Manejar la respuesta
-                console.log("Respuesta del servidor:", serverResponse);
-
-                if (serverResponse === "La cuenta ya existe.") {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Oops...',
-                        text: 'La cuenta ya existe!'
-                    });
-                } else {
-                    // refrescar
-                    window.location.reload();
-                }
-            } else {
-                alert("Hubo un error en la solicitud al servidor.");
-            }
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            // Manejar la respuesta 
+            console.log("Respuesta del servidor:", xhr.responseText);
+            // refrescar 
+            window.location.reload();
+        } else {
+            alert("Hubo un error en la solicitud al servidor.");
         }
     };
-
     xhr.send(formData);
-}
+  }
+
+
 
 
 

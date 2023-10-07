@@ -21,19 +21,6 @@
     // Hashear la contraseña 
     $hashedClave = md5($contrasena);
 
-    // Verificar si el número de cuenta ya existe
-    $queryCheckExistence = "SELECT COUNT(*) FROM usuarios_banca WHERE no_cuenta = ?";
-    $stmtCheckExistence = $conn->prepare($queryCheckExistence);
-    $stmtCheckExistence->bind_param('i', $numeroCuenta);
-    $stmtCheckExistence->execute();
-    $stmtCheckExistence->bind_result($count);
-    $stmtCheckExistence->fetch();
-    $stmtCheckExistence->close();
-
-    if ($count > 0) {
-        echo "La cuenta ya existe.";
-        exit();
-    }
 
     // Preparar la consulta para la inserción
     $query = "INSERT INTO usuarios_banca (no_cuenta, correo_electronico, telefono, password, confirmado, token)
