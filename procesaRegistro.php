@@ -22,6 +22,7 @@
     $hashedClave = md5($contrasena);
 
 
+
     // Preparar la consulta para la inserción
     $query = "INSERT INTO usuarios_banca (no_cuenta, correo_electronico, telefono, password, confirmado, token)
               VALUES (?, ?, ?, ?, ?, ?)";

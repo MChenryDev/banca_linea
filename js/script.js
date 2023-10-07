@@ -381,13 +381,6 @@ function validar7(event) {
                 text: 'Las contraseñas no coinciden!'
             });
         } 
-        else if (xhr.responseText === "existe") {
-            Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Las cuenta ya existe!'
-            });
-        } 
         else {
             Swal.fire({
                 icon: 'success',
