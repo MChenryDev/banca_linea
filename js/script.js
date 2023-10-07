@@ -410,7 +410,7 @@ function enviarDatos6(formData) {
 
 
   
-//   // AJAX Formulario
+// //   // AJAX Formulario
 //   function enviarDatos7(formData) {
 //     var xhr = new XMLHttpRequest();
 //     xhr.open("POST", "procesaRegistro.php", true);
@@ -426,6 +426,7 @@ function enviarDatos6(formData) {
 //     };
 //     xhr.send(formData);
 //   }
+
 
 var serverResponse;
 
@@ -444,29 +445,24 @@ function validar7(event) {
                 title: 'Oops...',
                 text: 'Las contraseñas no coinciden!'
             });
+        } else if (serverResponse === "La cuenta ya existe.") {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'La cuenta ya existe!'
+            });
         } else {
-            if (serverResponse === "existe") {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'La cuenta ya existe!'
-                });
-            } else if (serverResponse === "Registro insertado correctamente.") {
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Usuario Creado Correctamente',
-                    text: 'Verifica tu cuenta de correo para activar tu cuenta. Presiona Aceptar para continuar...'
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        // Si todo es válido, enviar datos del formulario por AJAX
-                        var formData = new FormData(document.getElementById("miFormulario7"));
-                        enviarDatos7(formData);
-                        //document.procesaFormCajero.submit();
-                    }
-                });
-            } else {
-                alert("Error: " + serverResponse);
-            }
+            Swal.fire({
+                icon: 'success',
+                title: 'Usuario Creado Correctamente',
+                text: 'Verifica tu cuenta de correo para activar tu cuenta. Presiona Aceptar para continuar...'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Si todo es válido, enviar datos del formulario por AJAX
+                    var formData = new FormData(document.getElementById("miFormulario7"));
+                    enviarDatos7(formData);
+                }
+            });
         }
     } else {
         alert("Has alcanzado el máximo número de intentos.!!");
@@ -488,7 +484,13 @@ function enviarDatos7(formData) {
                 // Manejar la respuesta
                 console.log("Respuesta del servidor:", serverResponse);
 
-                if (serverResponse === "Registro insertado correctamente.") {
+                if (serverResponse === "La cuenta ya existe.") {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'La cuenta ya existe!'
+                    });
+                } else {
                     // refrescar
                     window.location.reload();
                 }
@@ -500,6 +502,7 @@ function enviarDatos7(formData) {
 
     xhr.send(formData);
 }
+
 
 
 

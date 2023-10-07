@@ -31,7 +31,7 @@
     $stmtCheckExistence->close();
 
     if ($count > 0) {
-        echo "existe";
+        echo "La cuenta ya existe.";
         exit();
     }
 
