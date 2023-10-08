@@ -136,7 +136,7 @@ $accountExists = $row['cuenta_existe'] == 1;
                     <input type="hidden" name="cant_maxima_dia" id="cant_maxima_dia" value="">
 
                     <label class="form-label" for="cantida_transferir">Cantidad a Transferir</label>
-                    <input class="form-input" type="number" name="cantida_transferir" id="cantida_transferir">
+                    <input class="form-input" type="number" name="cantida_transferir" id="cantida_transferir"> 
                     
                     <input type="hidden" name="formulario_enviado" value="1">
                     <button class="form-button" type="submit" onclick="validar3(event)">Realizar Transferencia</button>
