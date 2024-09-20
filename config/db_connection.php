@@ -1,10 +1,10 @@
 <?php
 
-$host = 'containers-us-west-130.railway.app'; 
+$host = 'autorack.proxy.rlwy.net'; 
 $dbname = 'railway';
 $username = 'root';
-$password = 'mi4O2D08rmByLUxuRXUW';
-$port = '7264';
+$password = 'fbKpmCSetdaRgFoegHhRPFEbeimIWqZi';
+$port = '45302';
 
 // $DB_HOST=$_ENV["DB_HOST"];
 // $DB_USER=$_ENV["DB_USER"];
