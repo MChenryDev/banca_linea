@@ -5,7 +5,7 @@
     $token = $_GET['token'];
 
     // Buscar el token en la base de datos
-    $query = "SELECT * FROM usuarios_banca WHERE token = ?";
+    $query = "SELECT * FROM usuarios_banca WHERE token = ? AND confirmado != 1";
     $stmt = $conn->prepare($query);
     $stmt->bind_param('s', $token);
     $stmt->execute();
